@@ -1,0 +1,8 @@
+#! /bin/sh
+cd aports/$1/$2
+abuild fetch
+abuild unpack
+abuild deps
+abuild build
+abuild rootpkg
+find /home/sdk/packages -name "*.apk" -exec cp {} /mnt \;
