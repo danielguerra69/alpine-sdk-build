@@ -1,5 +1,4 @@
 #! /bin/sh
-abuild-keygen -a -i
 cp -R .abuild /mnt
 cd aports/$1/$2
 abuild fetch
