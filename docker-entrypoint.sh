@@ -1,11 +1,10 @@
 #! /bin/sh
 
 set -e
-
-if [ "$1" = 'keygen' ]; then
+if [ -d "~/.abuild" ]; then
+  exec "$@"
+else
   abuild-keygen -n
   cp -R ~/.abuild /mnt
   exec "$@"
 fi
-
-exec "$@"
