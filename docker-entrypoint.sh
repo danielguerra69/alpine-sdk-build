@@ -1,2 +1,2 @@
 #! /bin/sh
-abuild-keygen -a -i
+abuild-keygen -n
