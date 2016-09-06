@@ -4,7 +4,7 @@ set -e
 if [ -d "~/.abuild" ]; then
   exec "$@"
 else
-  abuild-keygen -n
+  abuild-keygen -a -n
   cp -R ~/.abuild /mnt
   exec "$@"
 fi
