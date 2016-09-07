@@ -6,13 +6,19 @@
 
 ### Usage
 
-Build apk from repository (main,testing), it needs /mnt to copy the apk to.
-Replace repo and package to your needs
-```bash
-docker run --rm -v $(pwd):/mnt danielguerra/alpine-sdk-build build repo package
-```
-After this check you dir.
+user:     sdk
+password: sdk
 
+For what alpine version are you building ?
+The following tags are available: latest, edge, 3.4, 3.3, 3.2, 2.7, 2.6
+Build apk from repository (main,testing), it needs /mnt to copy the apk to.
+Replace repo and package to your needs, alpine edge,main openssh
+```bash
+docker run --rm -v $(pwd):/mnt danielguerra/alpine-sdk-build:edge build main openssh
+```
+After this check the dir you started your docker command.
+The .abuild contains the keys. To add the apk to an other
+system copy the pub key to /etc/apk/
 If you want to do your own abuild do
 ```bash
 docker run -ti -v $(pwd):/mnt danielguerra/alpine-sdk-build
