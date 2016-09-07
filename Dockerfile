@@ -1,4 +1,6 @@
 FROM danielguerra/alpine-sdk:edge
 MAINTAINER Daniel Guerra
-ADD ./build /bin/build
-CMD /bin/sh
+COPY build /bin/
+COPY docker-entrypoint.sh /usr/local/bin/
+ENTRYPOINT ["docker-entrypoint.sh"]
+CMD ["/bin/sh"]
