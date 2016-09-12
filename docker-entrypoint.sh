@@ -1,10 +1,11 @@
 #! /bin/sh
 
 set -e
-if [ -d "~/.abuild" ]; then
-  exec "$@"
+if [ -f /home/sdk/.abuild/abuild.conf ]; then
+    echo "sdk" | sudo -S cp ~/.abuild/*.pub /etc/apk/keys
 else
-  abuild-keygen -a -n
-  cp -R ~/.abuild /mnt
-  exec "$@"
+    abuild-keygen -a -n
+    echo "sdk" | sudo -S cp ~/.abuild/*.pub /etc/apk/keys
 fi
+
+exec "$@"
