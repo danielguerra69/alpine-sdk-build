@@ -3,6 +3,7 @@ cd /tmp/aports/$1/$2
 abuild fetch
 abuild unpack
 abuild deps
+abuild prepare
 abuild build
 abuild rootpkg
 cd -
