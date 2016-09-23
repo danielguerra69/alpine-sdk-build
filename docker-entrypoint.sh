@@ -1,7 +1,7 @@
 #! /bin/sh
 
 set -e
-if [ -f /home/sdk/.abuild/abuild.conf ]; then
+if [ -d "/home/sdk/.abuild" ]; then
     echo "sdk" | sudo -S cp ~/.abuild/*.pub /etc/apk/keys
 else
     abuild-keygen -a -n
