@@ -1,8 +1,8 @@
 #### Alpine sdk apk builder
 
-### Image Size
+### About
 
-* [![Latest](https://badge.imagelayers.io/danielguerra/alpine-sdk-build.svg)](https://imagelayers.io/?images=danielguerra/alpine-sdk-build:latest 'latest') danielguerra/alpine-sdk-build
+With this container you can build alpine packages.
 
 ### Usage
 
@@ -10,7 +10,7 @@ user:     sdk
 password: sdk
 
 For what alpine version are you building ?
-The following tags are available: latest, edge, 3.4, 3.3, 3.2, 2.7, 2.6
+The following tags are available: latest, edge, 3.4, 3.3, 3.2, 3.1
 Build apk from repository (main,testing), it needs /mnt to copy the apk to.
 Replace repo and package to your needs, alpine edge,main openssh
 ```bash
