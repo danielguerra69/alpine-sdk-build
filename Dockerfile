@@ -1,4 +1,4 @@
-FROM danielguerra/alpine-sdk
+FROM danielguerra/alpine-sdk:edge
 MAINTAINER Daniel Guerra
 COPY build /bin/
 COPY docker-entrypoint.sh /usr/local/bin/
