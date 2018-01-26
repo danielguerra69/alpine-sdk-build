@@ -27,3 +27,12 @@ If you want to do your own abuild do
 docker run -ti -v $(pwd):/home/sdk danielguerra/alpine-sdk-build
 ```
 A clone of aports is in /tmp.
+
+### Build a package in a locally cloned out aports tree
+
+If you want to build a package from a local directory, mount this to /tmp/aports.
+Example (if aports is in your working directory):
+
+```bash
+docker run -ti -v $(pwd):/home/sdk -v $(pwd)/aports:/tmp/aports danielguerra/alpine-sdk-build:edge build main my-modified-package
+```
