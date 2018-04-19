@@ -1,4 +1,4 @@
-FROM danielguerra/alpine-sdk:3.5
+FROM danielguerra/alpine-sdk:3.7
 MAINTAINER Daniel Guerra
 COPY build /bin/
 COPY docker-entrypoint.sh /usr/local/bin/
